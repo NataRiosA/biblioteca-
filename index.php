@@ -1,5 +1,5 @@
 
-  <?php  include("index.html"); ?>
+  <?php  include("inicio.html"); ?>
   <?php  include("checkout.html"); ?>
   <?php  include("contact.html"); ?>
   <?php  include("cart.html"); ?>
