@@ -7,7 +7,7 @@
   <?php  include("product-detail.html") ?>
   <?php  include("product-list.html") ?>
   <?php  include("buscar_libro.html") ?>
-  <?php  include("crear_libro.html") ?>
+  <?php  include("crear_librohtml.php") ?>
   
   <?php  include("buscar_libro.php") ?>
   <?php  include("crear_libro.php") ?>

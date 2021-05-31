@@ -1,15 +1,10 @@
 <?php
-$host="127.0.0.1";
-$port="5432";
-$user="postgres";
-$pass="password";
-$dbname="biblioteca";
 
-$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$pass") or die('No se ha podido conectar: ' . pg_last_error());
+include('conexion.php');
 
 $nombre = $_POST["txtusuario"];
 $pass = $_POST["txtpassword"];
-$query = pg_query($conn,"SELECT * FROM usuario WHERE usuario = '".$nombre."'and contraseña = '".$pass."'");
+$query = pg_query($conn,"SELECT * FROM usuario WHERE usuario = '".$nombre."'AND contraseña = '".$pass."'");
 $nr = pg_num_rows($query);
 
 if($nr==1)
