@@ -1,12 +1,6 @@
-<?php
-    session_start();
-        include ("conexion.php");
-        
-        $con2=conectar();
-    ?>
+<?php include ("conexion.php"); ?>
     
 <!DOCTYPE html>
-
 
 <html lang="es">
     <head>
@@ -23,10 +17,9 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
 
         <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/slick/slick.css" rel="stylesheet">
-        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+        <!-- FONT AWESOEM -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
@@ -69,8 +62,8 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Mas paginas</a>
                                 <div class="dropdown-menu">
-                                    <a href="wishlist.html" class="dropdown-item">Buscar Libros</a>
-                                    <a href="crear_libro.html" class="dropdown-item">Crear Libro</a>                                    
+                                    <a href="buscar_libro.html" class="dropdown-item">Buscar Libros</a>
+                                    <a href="crear_librohtml.php" class="dropdown-item">Crear Libro</a>                                    
                                     <a href="login.html" class="dropdown-item">Iniciar sesión & Registrarse</a>
                                     <!-- <a href="contact.html" class="dropdown-item">Contactenos</a> -->
                                 </div>
@@ -110,7 +103,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="user">
-                            <a href="wishlist.html" class="btn wishlist">
+                            <a href="buscar_libro.html" class="btn wishlist">
                                 <i class="fa fa-heart"></i>
                                 <span>(0)</span>
                             </a>
@@ -141,11 +134,21 @@
         <div class="login">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-6">    
+                    <div class="col-lg-6">
+
+                        <?php if (isset($_SESSION['message'])) { ?>
+                        <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
+                            <?= $_SESSION['message']?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <?php session_unset(); } ?>
+
                         <div class="register-form">                                
                             <div class="row">
                                 <div class="col-md-6">
-                                <form method="POST" action="crear_libro.php">
+                                <form action="crear_libro.php" method="POST">
                                     <label>Codigo de libro</label>
                                     <input class="form-control" type="text" name= "codigo_libro" placeholder="Codigo de libro">
                                 </div>
@@ -195,7 +198,7 @@
                                 </div>
 
                                 <div class="col-md-12">
-                                    <button class="btn">Guardar Libro</button>
+                                    <input type="submit" name="crear_libro" class="btn btn-success btn-block" value="Crear Libro">
                                     </form>
                                 </div>
                             </div>
@@ -278,10 +281,9 @@
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         
         <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/slick/slick.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
         
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
