@@ -1,17 +1,17 @@
 <?php
-	session_start();
-		include ("conexion.php");
-		
-		$con2=conectar();
-	?>
-	
+    session_start();
+        include ("conexion.php");
+        
+        $con2=conectar();
+    ?>
+    
 <!DOCTYPE html>
 
 
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Libreria Free Mind</title>
+        <title>EsBook</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="eCommerce HTML Template Free Download" name="keywords">
         <meta content="eCommerce HTML Template Free Download" name="description">
@@ -145,7 +145,7 @@
                         <div class="register-form">                                
                             <div class="row">
                                 <div class="col-md-6">
-                                <form method="post" action="crear_libro.php">
+                                <form method="POST" action="crear_libro.php">
                                     <label>Codigo de libro</label>
                                     <input class="form-control" type="text" name= "codigo_libro" placeholder="Codigo de libro">
                                 </div>
@@ -194,9 +194,6 @@
                                     <input class="form-control" type="text" name= "imagen_portada" placeholder="Link Imagen portada">
                                 </div>
 
-                            
-
-                                
                                 <div class="col-md-12">
                                     <button class="btn">Guardar Libro</button>
                                     </form>
@@ -290,4 +287,3 @@
         <script src="js/main.js"></script>
     </body>
 </html>
-
