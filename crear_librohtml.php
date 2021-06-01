@@ -1,4 +1,4 @@
-<?php include ("conexion.php"); ?>
+<?php include ("conexion_bd.php"); ?>
     
 <!DOCTYPE html>
 
