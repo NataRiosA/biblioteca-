@@ -1,6 +1,6 @@
 <?php
 
-include ("conexion.php");
+include ("conexion_bd.php");
 
 // $objeto2 = new Conexion();
 // $con2 = $objeto2->Conectar();

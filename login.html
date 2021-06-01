@@ -5,13 +5,14 @@
 		$con=conectar();
 	?>
 	
+
 <!DOCTYPE html>
 
 
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>EsBook</title>
+        <title>Libreria Free Mind</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="eCommerce HTML Template Free Download" name="keywords">
         <meta content="eCommerce HTML Template Free Download" name="description">
@@ -103,10 +104,10 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <!-- <div class="search">
+                        <div class="search">
                             <input type="text" placeholder="Search">
                             <button><i class="fa fa-search"></i></button>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="col-md-3">
                         <div class="user">
@@ -130,7 +131,7 @@
             <div class="container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                    <li class="breadcrumb-item"><a href="#">Libros</a></li>
+                    <li class="breadcrumb-item"><a href="#">Productos</a></li>
                     <li class="breadcrumb-item active">Inicio de sesion y Registro</li>
                 </ul>
             </div>
@@ -180,8 +181,19 @@
                                 <div class="col-md-6">
                                     <label>Direccion de correspondencia</label>
                                     <input class="form-control" type="text" name= "direccion" placeholder="Direccion de correspondencia">
-                                </div>
                                 
+								</div>
+								<div class="col-md-6">
+                                    <label for="start">Fecha de Nacimiento</label>
+									<input type="date" id="start" name="fechanacimiento"
+										value=""
+										min="1900-01-01" max="2050-12-31">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>lugar de Nacimiento</label>
+                                    <input class="form-control" type="text" name= "lugardenacimiento" placeholder="Lugar de Nacimiento">
+                                
+								</div>                                
 
                                 
                                 <div class="col-md-12">
@@ -268,11 +280,18 @@
                 <div class="row payment align-items-center">
                     <div class="col-md-6">
                         <div class="payment-method">
-                            <h2>Aceptamos</h2>
+                            <h2>We Accept:</h2>
                             <img src="img/payment-method.png" alt="Payment Method" />
                         </div>
                     </div>
-
+                    <div class="col-md-6">
+                        <div class="payment-security">
+                            <h2>Secured By:</h2>
+                            <img src="img/godaddy.svg" alt="Payment Security" />
+                            <img src="img/norton.svg" alt="Payment Security" />
+                            <img src="img/ssl.svg" alt="Payment Security" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -282,11 +301,17 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
+                    <div class="col-md-6 copyright">
+                        <p>Copyright &copy; <a href="https://htmlcodex.com">HTML Codex</a>. All Rights Reserved</p>
+                    </div>
 
+                    <div class="col-md-6 template-by">
+                        <p>Template By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Footer Bottom End -->        
+        <!-- Footer Bottom End -->       
         
         <!-- Back to Top -->
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>

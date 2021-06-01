@@ -1,6 +1,6 @@
 <?php 
 
-	include('conexion.php');
+	include('conexion_bd.php');
 
     $titulo = $_POST['titulo'];
 
@@ -8,14 +8,12 @@
 
     $resultados = pg_query($conn,$consulta);
 
-    $nr = pg_num_rows($resultados);
+    $respuesta = pg_num_rows($resultados);
 
-    if($nr==1)
-    {
-        echo"Libro encontrado!";
+    if ($respuesta>=1) {
+        echo"Libro encontrado! <br/><br/>";
     }
-    else if ($nr == 0)
-    {
+    else {
         echo"El libro no se encuentra!";
     }
 
